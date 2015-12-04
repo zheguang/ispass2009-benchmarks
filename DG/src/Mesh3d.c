@@ -1,4 +1,4 @@
-#include "mpi.h"
+#include <mpi.h>
 #include "fem.h"
 
 Mesh *ReadMesh3d(char *filename){
