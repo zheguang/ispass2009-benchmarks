@@ -3,7 +3,7 @@
 git diff --cached > /tmp/sync.diff
 
 host=sam@bsn04.cs.brown.edu
-repo=/data/sam/studio/research/gpgpu
+repo=/data/sam/studio/research/gpgpu/ispass2009-benchmarks
 
 scp /tmp/sync.diff "$host":"$repo"
 

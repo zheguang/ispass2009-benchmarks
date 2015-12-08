@@ -56,6 +56,7 @@ for BMK in $BENCHMARKS; do
         echo "Adding symbolic-links to configuration files for $BMK:"
         ln -v -s $GPU_CONFIG_FILE $BMK
         ln -v -s $ICNT_CONFIG $BMK
+        ln -v -s /gpgpu/gpgpu-sim_distribution/configs/GTX480/gpuwattch_gtx480.xml $BMK
     fi
 done
 
