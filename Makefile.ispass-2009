@@ -26,6 +26,7 @@ default: check_environment common
 	$(SETENV) make noinline=$(noinline) -C RAY
 	$(SETENV) make noinline=$(noinline) -C STO
 	$(SETENV) make noinline=$(noinline) -C WP
+	$(SETENV) make noinline=$(noinline) -C simple
 
 check_environment:
 	 @if [ ! -n "$(CUDA_INSTALL_PATH)" ]; then \
@@ -74,6 +75,7 @@ clean: check_environment common
 	$(SETENV) make clean -C RAY
 	$(SETENV) make clean -C STO
 	$(SETENV) make clean -C WP
+	$(SETENV) make clean -C simple
 
 clean-visualizer:
 	rm `find -name "gpgpusim_visualizer__*.log.gz"`
