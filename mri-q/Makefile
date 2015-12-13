@@ -18,7 +18,7 @@ CUFILES		:= main.cu
 # Cuda dep
 CU_DEPS 	:= computeQ.cu
 # C/C++ source files (compiled with gcc / c++)
-CCFILES		:= file.cc
+CCFILES		:= file.cc parboil.c
 
 ################################################################################
 # Rules and targets
