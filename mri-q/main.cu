@@ -30,7 +30,7 @@
 #include <sys/time.h>
 #include <malloc.h>
 
-#include <parboil.h>
+#include "parboil.h"
 
 #include "file.h"
 #include "computeQ.cu"
