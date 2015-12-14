@@ -70,8 +70,8 @@ ComputeQ_GPU(int numK, int kGlobalIndex,
   int kIndex = 0;
   if (numK % 2) {
     float expArg = PIx2 * (ck[0].Kx * sX + ck[0].Ky * sY + ck[0].Kz * sZ);
-    sQr += ck[0].PhiMag * __cos(expArg);
-    sQi += ck[0].PhiMag * __sin(expArg);
+    sQr += ck[0].PhiMag * __cosf(expArg);
+    sQi += ck[0].PhiMag * __sinf(expArg);
     kIndex++;
     kGlobalIndex++;
   }
@@ -81,15 +81,15 @@ ComputeQ_GPU(int numK, int kGlobalIndex,
     float expArg = PIx2 * (ck[kIndex].Kx * sX +
 			   ck[kIndex].Ky * sY +
 			   ck[kIndex].Kz * sZ);
-    sQr += ck[kIndex].PhiMag * __cos(expArg);
-    sQi += ck[kIndex].PhiMag * __sin(expArg);
+    sQr += ck[kIndex].PhiMag * __cosf(expArg);
+    sQi += ck[kIndex].PhiMag * __sinf(expArg);
 
     int kIndex1 = kIndex + 1;
     float expArg1 = PIx2 * (ck[kIndex1].Kx * sX +
 			    ck[kIndex1].Ky * sY +
 			    ck[kIndex1].Kz * sZ);
-    sQr += ck[kIndex1].PhiMag * __cos(expArg1);
-    sQi += ck[kIndex1].PhiMag * __sin(expArg1);
+    sQr += ck[kIndex1].PhiMag * __cosf(expArg1);
+    sQi += ck[kIndex1].PhiMag * __sinf(expArg1);
   }
 
   Qr[xIndex] = sQr;
